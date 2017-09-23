@@ -16,25 +16,25 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_lockscreen_title" >
     
-     <com.droidx.support.preferences.SystemSettingSwitchPreference
+    <com.droidx.support.preferences.SystemSettingSwitchPreference
         android:key="ambient_wake_gestures"
         android:title="@string/ambient_wake_gestures_title"
         android:summary="@string/ambient_wake_gestures_summary"
         android:defaultValue="false" />
 
-     <com.droidx.support.preferences.SystemSettingSwitchPreference
+    <com.droidx.support.preferences.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
         android:title="@string/double_tap_to_sleep_lockscreen_title"
         android:summary="@string/double_tap_to_sleep_lockscreen_summary"
         android:defaultValue="false"/>
 
-     <com.droidx.support.preferences.GlobalSettingSwitchPreference
+    <com.droidx.support.preferences.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wake_when_plugged_or_unplugged_title"
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
         android:defaultValue="@*android:bool/config_unplugTurnsOnScreen" />
         
-     <PreferenceCategory
+    <PreferenceCategory
         android:key="lockscreen_media_art_options"
         android:title="@string/lockscreen_media_art_options_title">
 
@@ -53,10 +53,10 @@
         android:defaultValue="true" />
     
     <com.droidx.support.preferences.SecureSettingSwitchPreference
-            android:key="secure_lockscreen_qs_disabled"
-            android:title="@string/disable_qs_title"
-            android:summary="@string/disable_qs_summary"
-            android:defaultValue="false" />
+        android:key="secure_lockscreen_qs_disabled"
+        android:title="@string/disable_qs_title"
+        android:summary="@string/disable_qs_summary"
+        android:defaultValue="false" />
 
     <com.droidx.support.preferences.SystemSettingSwitchPreference
         android:key="lockscreen_power_menu_disabled"
@@ -74,6 +74,24 @@
             android:title="@string/udfps_settings_title"
             android:summary="@string/udfps_settings_summary"
             android:fragment="com.droidx.customize.fragments.UdfpsSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="lockscreen_ui_finterprint_category"
+        android:title="@string/fingerprint_category">
+
+        <SwitchPreference
+            android:key="fingerprint_success_vib"
+            android:title="@string/fprint_success_vib_title"
+            android:summary="@string/fprint_success_vib_summary"
+            android:persistent="true" />
+
+        <SwitchPreference
+            android:key="fingerprint_error_vib"
+            android:title="@string/fprint_error_vib_title"
+            android:summary="@string/fprint_error_vib_summary"
+            android:persistent="true" />
 
     </PreferenceCategory>
 
