@@ -15,13 +15,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-<<<<<<< HEAD:res/values/droidx_strings.xml
     <!-- DroidX Customize -->
     <string name="customize_dashboard_title">Customize your DroidX-UI!</string>
-=======
-    <!-- Crystal Mine -->
-    <string name="crystal_dashboard_title">Mine</string>
+    
+    <!-- Category: Statusbar -->
     <string name="category_statusbar_title">Statusbar</string>
->>>>>>> 47e2bb6 (Add statusbar category):res/values/crystal_strings.xml
 
+    <!-- Category: QuickSettings-->
+    <string name="category_quicksettings_title">Quick Settings</string>
 </resources> 
