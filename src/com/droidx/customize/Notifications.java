@@ -56,6 +56,12 @@ public class Notifications extends SettingsPreferenceFragment
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
     }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        Settings.System.putIntForUser(resolver,
+                Settings.System.NOTIFICATION_SOUND_VIB_SCREEN_ON, 1, UserHandle.USER_CURRENT);
+    }
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
