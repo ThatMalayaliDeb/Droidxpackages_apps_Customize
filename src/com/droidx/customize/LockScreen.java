@@ -29,9 +29,11 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.droidx.udfps.UdfpsUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -46,6 +48,12 @@ import java.util.List;
 @SearchIndexable
 public class LockScreen extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
+
+    private static final String UDFPS_CATEGORY = "udfps_category";
+
+    private PreferenceCategory mUdfpsCategory;
+
+
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -54,6 +62,10 @@ public class LockScreen extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+        mUdfpsCategory = findPreference(UDFPS_CATEGORY);
+        if (!UdfpsUtils.hasUdfpsSupport(getContext())) {
+            prefSet.removePreference(mUdfpsCategory);
+            }
     }
     
     @Override
