@@ -47,16 +47,35 @@ import java.util.List;
 public class QuickSettings extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
 
+    private static final String KEY_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
+    
+    private SwitchPreference mShowAutoBrightness;
+    
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_quicksettings);
-        PreferenceScreen prefSet = getPreferenceScreen();
+        final Context mContext = getActivity().getApplicationContext();
+        final ContentResolver resolver = mContext.getContentResolver();
+        final PreferenceScreen prefSet = getPreferenceScreen();
+        
+        mShowAutoBrightness = findPreference(KEY_SHOW_AUTO_BRIGHTNESS);
+        boolean automaticAvailable = mContext.getResources().getBoolean(
+                com.android.internal.R.bool.config_automatic_brightness_available);
+        if (automaticAvailable) {
+            mShowAutoBrightness.setEnabled(true);
+        } else {
+            prefSet.removePreference(mShowAutoBrightness);
+        }
 
     }
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        int value = Integer.parseInt((String) newValue);
+        if (mShowAutoBrightness != null)
+            mShowAutoBrightness.setEnabled(value > 0);
         return false;
     }  
     
