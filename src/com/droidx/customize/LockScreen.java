@@ -56,7 +56,7 @@ public class LockScreen extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CRYSTAL;
+        return MetricsProto.MetricsEvent.CUSTOMIZE;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =

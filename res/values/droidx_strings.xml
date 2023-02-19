@@ -14,8 +14,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- DroidX Customize -->
-    <string name="customize_dashboard_title">Customize your DroidX-UI!</string>
+    <!-- DroidX Customizer -->
+    <string name="customize_dashboard_title">Customizer</string>
+     <string name="build_tweaks_summary_title">Customize your own version of DroidX-UI!</string>
       
     <!-- General -->
     <string name="ok">Okay</string>
@@ -28,7 +29,7 @@
     <string name="attention">Attention</string>
     <string name="reset">Reset</string>
     
-    <string name="category_animations_title">Animations</string>
+    <string name="category_system_title">System</string>
     <string name="category_buttons_title">Buttons</string>
     <string name="category_lockscreen_title">Lockscreen</string>
     <string name="category_gestures_title">Gestures</string>

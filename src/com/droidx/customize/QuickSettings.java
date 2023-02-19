@@ -51,12 +51,13 @@ public class QuickSettings extends SettingsPreferenceFragment {
         PreferenceScreen prefSet = getPreferenceScreen();
 
     }
-
+    
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.DROIDX;
+        return MetricsProto.MetricsEvent.CUSTOMIZE;
     }
 
+    
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
                 @Override

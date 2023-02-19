@@ -17,14 +17,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/customize_dashboard_title" >
          
-     <!-- Animations -->
-     <Preference
-          android:id="@+id/animations"
-          android:title="@string/category_animations_title"
-          android:fragment="com.droidx.customize.Animations"
-          android:layout="@layout/preference_category_animations"
-          />
-
      <!-- Buttons -->
      <Preference
           android:id="@+id/buttons"
@@ -89,4 +81,12 @@
           android:layout="@layout/preference_category_statusbar"
           />
 
+     <!-- System -->
+     <Preference
+          android:id="@+id/system"
+          android:title="@string/category_system_title"
+          android:fragment="com.droidx.customize.System"
+          android:layout="@layout/preference_category_system"
+          />
+          
 </PreferenceScreen>
