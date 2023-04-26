@@ -44,6 +44,8 @@ import androidx.preference.SwitchPreference;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
+import android.text.format.DateFormat;
+import com.droidx.support.preferences.SecureSettingListPreference;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
@@ -73,6 +75,9 @@ public class StatusBar extends SettingsPreferenceFragment
             
     private SystemSettingSwitchPreference mThreshold;
     private SystemSettingMainSwitchPreference mNetMonitor;
+
+    private static final String KEY_STATUS_BAR_AM_PM = "status_bar_am_pm";
+    private SecureSettingListPreference mStatusBarAmPm;
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -82,6 +87,8 @@ public class StatusBar extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mStatusBarAmPm = findPreference(KEY_STATUS_BAR_AM_PM);
         
         // Network traffic 
         boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
@@ -96,6 +103,15 @@ public class StatusBar extends SettingsPreferenceFragment
         mThreshold.setChecked(isThresholdEnabled);
         mThreshold.setOnPreferenceChangeListener(this);
         
+    }
+    
+    @Override
+    public void onResume() {
+        super.onResume();
+	      if (DateFormat.is24HourFormat(requireContext())) {
+            mStatusBarAmPm.setEnabled(false);
+            mStatusBarAmPm.setSummary(R.string.status_bar_am_pm_unavailable);
+            }
     }
     
     @Override
