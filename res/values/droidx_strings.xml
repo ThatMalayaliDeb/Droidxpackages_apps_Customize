@@ -216,4 +216,9 @@
     <!-- QS auto brightness icon -->
     <string name="qs_auto_brightness_title">Auto brightness icon</string>
     <string name="qs_auto_brightness_summary">Show toggle for adaptive brightness near the slider</string>
+    
+    <!-- QS style -->
+    <string name="qs_style_title">QS Panel style</string>
+    <string name="qs_style_default">A12</string>
+    <string name="qs_style_round">A11</string>
 </resources>
