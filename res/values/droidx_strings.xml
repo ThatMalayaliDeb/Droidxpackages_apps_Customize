@@ -243,4 +243,8 @@
     <string name="status_bar_am_pm_small">Small</string>
     <string name="status_bar_am_pm_title">Clock AM/PM style</string>
     <string name="status_bar_am_pm_unavailable">24-hour clock is enabled</string>
+    
+    <!-- Disable QS -->
+    <string name="disable_qs_title">Hide QS in secure lockscreen</string>
+    <string name="disable_qs_summary">Hides QS if device is locked. Does not disable notification shade</string>
 </resources>
