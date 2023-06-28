@@ -45,6 +45,12 @@
             android:defaultValue="false" />
 
     </PreferenceCategory>
+
+    <com.droidx.support.preferences.SystemSettingSwitchPreference
+        android:key="enable_ripple_effect"
+        android:title="@string/enable_fingerprint_ripple_effect_title"
+        android:summary="@string/enable_fingerprint_ripple_effect_summary"
+        android:defaultValue="true" />
     
     <com.droidx.support.preferences.SecureSettingSwitchPreference
             android:key="secure_lockscreen_qs_disabled"
