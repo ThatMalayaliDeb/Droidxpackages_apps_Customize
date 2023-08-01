@@ -38,9 +38,22 @@ import java.util.List;
 public class CustomizeDashboard extends SettingsPreferenceFragment { 
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.customize_dashboard);
+        importLayout();
+    }
+
+    public void importLayout() {
+        final PreferenceScreen screen = getPreferenceScreen();
+
+        for (int i = 0; i < screen.getPreferenceCount(); i++) {
+            Preference pref = screen.getPreference(i);
+            boolean isValid = pref.isEnabled() && pref.isVisible() && pref.getTitle() != null;
+            if (isValid && pref.getLayoutResource() != R.layout.layout_customizer) {
+                pref.setLayoutResource(R.layout.layout_customizer);
+            }
+        }
     }
 
     @Override
@@ -64,4 +77,4 @@ public class CustomizeDashboard extends SettingsPreferenceFragment {
                     return keys;
                 }
             };
-} 
+}

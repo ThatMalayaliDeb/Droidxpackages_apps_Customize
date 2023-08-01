@@ -21,72 +21,81 @@
      <Preference
           android:id="@+id/battery"
           android:title="@string/category_battery_title"
+          android:summary="@string/category_battery_summary"
+          android:icon="@drawable/ic_settings_battery_white"
           android:fragment="com.droidx.customize.Battery"
-          android:layout="@layout/preference_category_battery"
           />
           
      <!-- Buttons -->
      <Preference
           android:id="@+id/buttons"
           android:title="@string/category_buttons_title"
+          android:summary="@string/category_buttons_summary"
+          android:icon="@drawable/ic_category_buttons"
           android:fragment="com.droidx.customize.Buttons"
-          android:layout="@layout/preference_category_buttons"
           />
           
      <!-- Lockscreen -->
      <Preference
           android:id="@+id/lockscreen"
           android:title="@string/category_lockscreen_title"
+          android:summary="@string/category_lockscreen_summary"
+          android:icon="@drawable/ic_category_lockscreen"
           android:fragment="com.droidx.customize.LockScreen"
-          android:layout="@layout/preference_category_lockscreen"
           />
      
      <!-- Misc -->
      <Preference
           android:id="@+id/misc"
           android:title="@string/category_misc_title"
+          android:summary="@string/category_misc_summary"
+          android:icon="@drawable/ic_category_misc"
           android:fragment="com.droidx.customize.Misc"
-          android:layout="@layout/preference_category_misc"
           />
           
      <!-- Notifications -->
      <Preference
           android:id="@+id/notifications"
           android:title="@string/category_notifications_title"
+          android:summary="@string/category_notifications_summary"
+          android:icon="@drawable/ic_category_notifications"
           android:fragment="com.droidx.customize.Notifications"
-          android:layout="@layout/preference_category_notifications"
           />
 
      <!-- Power Menu -->
      <Preference
           android:id="@+id/powermenu"
           android:title="@string/category_powermenu_title"
+          android:summary="@string/category_powermenu_summary"
+          android:icon="@drawable/ic_category_powermenu"
           android:fragment="com.droidx.customize.PowerMenu"
-          android:layout="@layout/preference_category_powermenu"
           />
 
      <!-- Quick Settings -->
      <Preference
           android:id="@+id/quick_settings"
           android:title="@string/category_quicksettings_title"
+          android:summary="@string/category_quicksettings_summary"
+          android:icon="@drawable/ic_category_quicksettings"
           android:fragment="com.droidx.customize.QuickSettings"
-          android:layout="@layout/preference_category_quicksettings"
           />
 
      <!-- Statusbar -->
      <Preference
           android:id="@+id/statusbar"
           android:title="@string/category_statusbar_title"
+          android:summary="@string/category_statusbar_summary"
+          android:icon="@drawable/ic_category_statusbar"
           android:fragment="com.droidx.customize.StatusBar"
-          android:layout="@layout/preference_category_statusbar"
           />
 
      <!-- System -->
      <Preference
           android:id="@+id/system"
           android:title="@string/category_system_title"
+          android:summary="@string/category_system_summary"
+          android:icon="@drawable/ic_category_system"
           android:fragment="com.droidx.customize.System"
-          android:layout="@layout/preference_category_system"
           />
           
 </PreferenceScreen>

@@ -40,6 +40,17 @@
     <string name="category_statusbar_title">Statusbar</string>
     <string name="category_misc_title">Miscellaneous</string>
     
+    <string name="category_system_summary">Personalize your device with system settings Customization.</string>
+    <string name="category_buttons_summary">Easily modify buttons for seamless devices control.</string>
+    <string name="category_lockscreen_summary">Manage and personalize the lockscreen elements and actions.</string>
+    <string name="category_gestures_summary">Configure intuitive gestures for seamless device interaction.</string>
+    <string name="category_battery_summary">Customize battery style to match your preferences.</string>
+    <string name="category_notifications_summary">Personalize your device\'s notification with ease.</string>
+    <string name="category_powermenu_summary">Customize your power menu for efficiency.</string>
+    <string name="category_quicksettings_summary">Easily customize quick settings for seamless access.</string>
+    <string name="category_statusbar_summary">Tailor the statusbar to your preferences.</string>
+    <string name="category_misc_summary">Use various spoofs and misc settings.</string>
+
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the adaptive icon shape (e.g. launcher and quick settings icons). -->
     <string name="theme_customization_icon_shape_title">Icon shape</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize accent color. -->
