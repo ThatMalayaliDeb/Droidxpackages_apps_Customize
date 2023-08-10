@@ -21,7 +21,7 @@
         android:title="@string/qs_tile_shape"
         android:entries="@array/qs_tile_shape_entries"
         android:entryValues="@array/qs_tile_shape_values"
-        android:defaultValue="2" />
+        android:defaultValue="0" />
         
     <com.droidx.support.preferences.SecureSettingSwitchPreference
         android:key="qs_show_auto_brightness"
