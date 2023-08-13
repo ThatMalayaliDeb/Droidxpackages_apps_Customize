@@ -15,7 +15,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- DroidX Customizer -->
-    <string name="customize_dashboard_title">Customizer</string>
+    <string name="customize_dashboard_title">DXUI LAB</string>
      <string name="build_tweaks_summary_title">Customize your own version of DroidX-UI!</string>
       
     <!-- General -->
