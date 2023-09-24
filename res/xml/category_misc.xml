@@ -27,12 +27,6 @@
             android:defaultValue="true" />
 
      </PreferenceCategory>
-
-     <com.droidx.support.preferences.SystemSettingSwitchPreference
-        android:key="click_partial_screenshot"
-        android:title="@string/click_partial_screenshot_title"
-        android:summary="@string/click_partial_screenshot_summary"
-        android:defaultValue="false" />
         
      <com.droidx.support.preferences.SecureSettingSwitchPreference
         android:key="window_ignore_secure"
